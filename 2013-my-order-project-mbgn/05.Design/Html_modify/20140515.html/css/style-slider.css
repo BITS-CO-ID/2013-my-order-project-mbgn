@@ -1,0 +1,189 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* LayerSlider Layers and Sublayers unique styles */
+
+#layerslider,
+#layerslider2 {
+	width: 710px;
+	height: 340px;
+	float: right;
+	margin-top: 20px;
+}
+
+#people-text1{
+	color: #0071bd;
+	left: 390px;
+	top: 90px;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#people-text2{
+	background: url('../images/icon-checked.png') no-repeat left center;
+	padding-left: 20px;
+	color: #0071bd;
+	left: 390px;
+	top: 160px;
+	font-weight: bold;
+}
+#people-text3{
+	background: url('../images/icon-checked.png') no-repeat left center;
+	padding-left: 20px;
+	color: #0071bd;
+	left: 390px;
+	top: 190px;
+	font-weight: bold;
+}
+#people-text4{
+	background: url('../images/icon-checked.png') no-repeat left center;
+	padding-left: 20px;
+	color: #0071bd;
+	left: 390px;
+	top: 220px;
+	font-weight: bold;
+}
+#people-text5{
+	left: 415px;
+	top: 250px;
+	font-weight: bold;
+}
+#people-text5 a{
+	background: url('../images/button-lien-he.png') no-repeat top center;
+	color: #fff;
+	display: block;
+	float: left;
+	font-size: 16px;
+	height: 26px;
+	width: 96px;
+	text-align: center;
+	padding-top: 5px;
+	text-transform: uppercase;
+}
+
+#leaf1 {
+	left: 80px;
+	top: 80px;
+}
+
+#leaf2 {
+	left: -20px;
+	top: 120px;
+}
+
+#leaf3 {
+	left: 500px;
+	top: 150px;
+}
+
+#clouds {
+	left: -100px;
+	top: 100px;
+}
+
+#earth {
+	left: 550px;
+	top: 67px;
+}
+
+#l5text1, #l5text2, #l5text3 {
+	width: 100px;
+	padding: 5px;
+	text-align: center;
+	color: #eee;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #000;
+	background-color: rgba(255,255,255,.07);
+	font-size: 14px;
+	-webkit-transform: rotate(-30deg); 
+	-moz-transform: rotate(-30deg);	
+}
+
+#l5text1 {
+	left: 150px;
+	top: 100px;
+}
+
+#l5text2 {
+	left: 300px;
+	top: 100px;	
+}
+
+#l5text3 {
+	left: 450px;
+	top: 100px;
+}
+
+#button-lienhe{
+	background: url('../images/slider-button.png') no-repeat top left;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	font-weight: bold;
+	height: 30px;
+	width: 105px;
+	text-align: center;
+	text-indent: uppercase;
+	top: 215px !important;
+	left: 50px !important;
+}
+#button-lienhe a{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	font-weight: bold;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+#button-khuyenmai{
+	background: url('../images/slider-button.png') no-repeat top left;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	font-weight: bold;
+	height: 30px;
+	width: 105px;
+	text-align: center;
+	text-indent: uppercase;
+	top: 230px !important;
+	left: 50px !important;
+}
+#button-khuyenmai a{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	font-weight: bold;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+#button-dathang{
+	background: url('../images/slider-button.png') no-repeat top left;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	font-weight: bold;
+	height: 30px;
+	width: 105px;
+	text-align: center;
+	text-indent: uppercase;
+	top: 250px !important;
+	left: 50px !important;
+}
+#button-dathang a{
+	color: #fff;
+	font-size: 14px;
+	font-family: 'open_sansregular';
+	font-weight: bold;
+	line-height: 30px;
+	text-transform: uppercase;
+}
