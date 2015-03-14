@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMS1.Master.cs" Inherits="Ecms.Website.Site.CMS1" %>
+
+<%@ Register Src="~/Site/PartControl2/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/Site/PartControl2/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+<%@ Register Src="~/Site/PartControl2/LeftNavigation.ascx" TagPrefix="uc1" TagName="LeftNavigation" %>
+<%@ Register Src="~/Site/PartControl2/LeftNavigation2.ascx" TagPrefix="uc1" TagName="LeftNavigation2" %>
+<%@ Register Src="~/Site/PartControl2/MenuTop.ascx" TagPrefix="uc1" TagName="MenuTop" %>
+<%@ Register Src="~/Site/PartControl2/CustomerInfo.ascx" TagPrefix="uc1" TagName="CustomerInfo" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <asp:ContentPlaceHolder ID="titlePlaceHolder" runat="server">
+        MBGN - Vận chuyển mua hộ hàng hóa từ Anh - Mỹ - Đức | Amazon - ebay - walmart - drugstore - costco ...|
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width"/>
+    <!-- Main Style Sheet -->
+    <link href='<%= ResolveUrl("~/Content2/css/styles.css")%>' rel="stylesheet" type="text/css" />
+    <link href='<%= ResolveUrl("~/Content2/css/styles2.css")%>' rel="stylesheet" type="text/css" />
+    <link href='<%= ResolveUrl("~/Content2/css/resposive.css") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= ResolveUrl("~/Content2/layerslider/css/layerslider.css") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= ResolveUrl("~/Content2/css/style-slider.css") %>' rel="stylesheet" type="text/css" />
+    <link href='<%= ResolveUrl("~/Content2/css/FrontendStyle.css")%>' rel="stylesheet" type="text/css" />
+    
+
+    <!-- JQuery Plugin -->
+    <script type='text/javascript' src='<%= ResolveUrl("~/Content2/js/selectnav.js")%>'></script>
+    <script type='text/javascript' src='<%= ResolveUrl("~/Content2/js/jquery-1.9.1.min.js")%>'></script>
+    <script type='text/javascript' src='<%= ResolveUrl("~/Content2/js/jquery.bxslider.js")%>'></script>
+    <script type='text/javascript' src='<%= ResolveUrl("~/Content2/layerslider/jQuery/jquery-easing-1.3.js")%>'></script>
+    <script type='text/javascript' src='<%= ResolveUrl("~/Content2/layerslider/js/layerslider.kreaturamedia.jquery.js")%>'></script>
+
+    <script src='<%= ResolveUrl("~/Content/Scripts/Common/jquery.inputmask.js") %>' type="text/javascript"></script>
+    <script src='<%= ResolveUrl("~/Content/Scripts/Common/jquery.inputmask.date.extensions.js") %>' type="text/javascript"></script>
+    <script src='<%= ResolveUrl("~/Content/Scripts/Common/jquery.validate.1.9.js")%>' type="text/javascript"></script>
+    <script src='<%= ResolveUrl("~/Content/Scripts/SiteScripts/FormValidate.js")%>' type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#layerslider').layerSlider({
+                skinsPath: '../Content2/layerslider/skins/'
+            });
+
+            /*
+            $('#showcart').click(function () {
+                $('.cart-hover').toggle("slide");
+            });
+            
+            $('#showlogin').click(function () {
+                $('.login-hover').toggle("slide");
+            });
+            */
+            
+            $('#showleftmenu').click(function () {
+                $('.left-menu').toggle("slide");
+            });
+            selectnav('main-site-menu', {
+                label: '-- SITE MENU -- ',
+                nested: true,
+                indent: '-'
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="formMain" class="formMain" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    
+    <div id="dim" class="wrapper">
+        <div class="header">
+            <uc1:Header ID="header1" runat="server" />
+            <div class="site-menu contener menu-admin">
+                <uc1:LeftNavigation2 ID="leftNavigation1" runat="server" />
+                <uc1:MenuTop ID="menuTop10" runat="server" />
+            </div>
+        </div>
+        <div class="main-content">
+            <% if (!CheckSigin()){ %>
+                <uc1:CustomerInfo ID="customerInfo1" runat="server" />
+            <%} else { %>
+                <img class="img-nlogin" src='<%= ResolveUrl("~/Content2/images/banner-nlogin.png")%>' alt="mbgn" />
+            <%} %>
+            <asp:ContentPlaceHolder ID="mainContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <uc1:Footer id="footer" >
+            <uc1:Footer ID="ucFooter" runat="server" />
+        </uc1:Footer>
+    </div>
+    <!-- END Footer -->
+    </form>
+
+    
+   
+</body>
+</html>
